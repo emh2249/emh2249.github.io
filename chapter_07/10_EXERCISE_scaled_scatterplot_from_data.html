@@ -7,10 +7,15 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.4.0/d3.min.js"></script>
 	<style type="text/css">
 		/* No style rules here yet */
+		h2 {
+				font-family:"Consolas", helvetica;
+				color:#000000;
+			}
 	</style>
 </head>
 
 <body>
+	<h2>D3: Time scale</h2> 
 	<script type="text/javascript">
 
 		//ASSIGNMENT: A new dataset was loaded here in this scatterplot called dataset_for_assignment
@@ -113,7 +118,8 @@
 					})
 					.attr("r", function (d) {
 						return rScale(d.Count)//TODO: use the rScale to create circles whose size correspond to the count
-					});
+					})
+					.attr("fill", "#680E4B");
 
 				svg.selectAll("text")
 					.data(dataset)
@@ -128,9 +134,9 @@
 					.attr("y", function (d) {
 						return yScale(d.Count) - rScale(d.Count)- 3;//TODO: return the approperiate y value
 					})
-					.attr("font-family", "sans-serif")
+					.attr("font-family","Consolas", "sans-serif")
 					.attr("font-size", "12px")
-					.attr("fill", "#bbb")
+					.attr("fill", "#EF476F")
 					.attr("text-anchor", "middle");
 
 
