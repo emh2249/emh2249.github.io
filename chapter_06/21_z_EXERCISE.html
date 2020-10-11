@@ -3,16 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: SVG bar chart with value labels (centered)</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.10.0/d3.min.js"></script>
 		<style type="text/css">
 			/* No style rules here yet */		
 		</style>
 	</head>
 	<body>
+		<h1>Making a horizontal bar chart</h1>
 		<script type="text/javascript">
-            //ASSIGNMENT: to familiarize youself with drawing in svg 
-            //1. change the bar chart orientation so that it is horizontal(bars go across) instead of vertical, changing the placement of text as well to keep the number labels at the end of each bar
-            //2. change the bar chart colors so that instead of shades of blue, the colors are shades of red or green. (r,g,b)
+            // Elaine Hsieh. Data Viz. 09/28/2020
+			//ASSIGNMENT: to familiarize yourself with drawing in svg 
+			//1. change the bar chart orientation so that it is horizontal(bars go across) 
+			//    instead of vertical, changing the placement of text as well to keep the number 
+			//    labels at the end of each bar
+			//2. change the bar chart colors so that instead of shades of blue, the colors are 
+			//    shades of red or green. (r,g,b)
             
 			//Width and height
 			var w = 500;
@@ -34,18 +39,18 @@
 			   .append("rect")
                 //HINT: start by switching the x and y values with eachother, and the width and height values with eachother. 
                         //then adjust the x values such that each rectangle aligns on the left.
-			   .attr("x", function(d, i) {
+			   .attr("y", function(d, i) {
 			   		return i * (w / dataset.length);
 			   })
-			   .attr("y", function(d) {
-			   		return h - (d * 4);
+			   .attr("x", function(d) {
+			   		return 0;
 			   })
-			   .attr("width", w / dataset.length - barPadding)
-			   .attr("height", function(d) {
+			   .attr("height", w / dataset.length - barPadding)
+			   .attr("width", function(d) {
 			   		return d * 4;
 			   })
 			   .attr("fill", function(d) {
-					return "rgb(0, 0, " + Math.round(d * 10) + ")";
+					return "rgb(0, " + Math.round(d * 12) + ", 0)";
 			   });
 
 
@@ -58,15 +63,16 @@
 			   		return d;
 			   })
 			   .attr("text-anchor", "middle")
-			   .attr("x", function(d, i) {
+			   .attr("y", function(d, i) {
 			   		return i * (w / dataset.length) + (w / dataset.length - barPadding) / 2;
 			   })
-			   .attr("y", function(d) {
-			   		return h - (d * 4) + 14;
+			   .attr("x", function(d) {
+			   		return (d * 4) + 14;
 			   })
 			   .attr("font-family", "sans-serif")
-			   .attr("font-size", "11px")
-			   .attr("fill", "white");
+			   .attr("font-size", "20px")
+			   .attr("font-weight", "lighter")
+			   .attr("fill", "blue");
 
 
 			
