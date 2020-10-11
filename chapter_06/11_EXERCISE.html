@@ -3,14 +3,19 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: Using conditions and values with SVG</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.10.0/d3.min.js"></script>
 		<style type="text/css">
-			/* No style rules here yet */		
+			/* No style rules here yet */	
+			p {
+				font-family:"Consolas", helvetica;
+				color:#000000;
+			}	
 		</style>
 	</head>
 	<body>
+		<p>D3: Using conditions and values with SVG</p>
 		<script type="text/javascript">
-			
+			//Elaine Hsieh. Data Viz. 9/29/2020 
             //ASSIGNMENT: 
             //1. change circle x so that it reflects the distance in the dataset
             //2. change circle so that the radius is the radius generated in the dataset, not a constant 5
@@ -18,8 +23,8 @@
             //4. change the svg dimensions(w or h variables) so that all circles fit into svg and are not clipped.
             
 			//Width and height
-			var w = 300;
-			var h = 20;
+			var w = 800;
+			var h = 300;
 			
 			//Dataset of fake planets
 			var dataset = [
@@ -43,18 +48,29 @@
 
 			circles.attr("cx", function(d, i) {
             //change distance here
-						return (i * 50) + 25;
+				return d["distance"];
+						// return (i * 50) + 25;
 					})
 				   .attr("cy", h/2)
 				   .attr("r", function(d) {
+					   return d["radius"];
              //change radius here
-						return 5;
+						
 				   })
-				   .attr("fill", function(d){
+				   .attr("fill", function(d, r){
+					   if (d["radius"] > 5){
+						   return "red";
+					   } else {
+						   return "gold"
+					   }
                //you will put "if else" statement here to return 2 things depending on the radius(d) instead of return gold
-				       return "gold"
 				   })
 				   .attr("stroke-width",2);
+
+
+
+
+
 
 		</script>
 	</body>
