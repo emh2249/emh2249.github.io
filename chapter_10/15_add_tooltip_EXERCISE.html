@@ -34,7 +34,7 @@
 	</head>
 	<body>
 
-		<p>Elaine is having a difficult time adding a tooltip...</p>
+		<h2>Elaine adds a tooltip!</h2>
 		<div id="tooltip" class="hidden">
 			<p><strong>Important Label Heading</strong></p>
 			<p><span id="value">100</span>%</p>
@@ -153,7 +153,7 @@
 					.on("mouseout", function (d, i) {
 						d3.select(this).attr("fill", "black")
 						//TODO: hide tooltip here
-						d3.select("#tooltip").remove()
+						d3.select("#tooltip").classed("hidden", true) //added here instead of remove, its hidden
 					});
 
 				   //Building the X + Y AXIS 
