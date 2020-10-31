@@ -36,8 +36,8 @@
 
 		<h2>Elaine adds a tooltip!</h2>
 		<div id="tooltip" class="hidden">
-			<p><strong>Important Label Heading</strong></p>
-			<p><span id="value">100</span>%</p>
+			<p><strong>Percentage of Point</strong></p>
+			<p><span id="value"></span></p>
 		</div>
 		<script type="text/javascript"> 
 		
@@ -141,11 +141,14 @@
 						//TODO: show tooltip here
 						//Show the tooltip
 						//Update the tooltip position and value
+					//Get this bar's x/y values, then augment for the tooltip
+
+					
 						d3.select("#tooltip")
 							.style("left", xScale(d.Date) + "px")
 							.style("top", yScale(d.Amount) + "px")
 							.select("#value")
-							.text(d)
+							.text(d.Amount + "%")
 						d3.select("#tooltip").classed("hidden", false);
 					})
 
