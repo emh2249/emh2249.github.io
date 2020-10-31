@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: Adding dynamic color, based on data</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.10.0/d3.min.js"></script>
 		<style type="text/css">
 			/* No style rules here yet */		
 		</style>
@@ -40,7 +40,7 @@
 			   		return d * 4;
 			   })
 			   .attr("fill", function(d) {
-					return "rgb(0, 0, " + Math.round(d * 10) + ")";
+					return "rgb(0, " + Math.round(d * 9) + ", 0)";
 			   });
 			
 		</script>

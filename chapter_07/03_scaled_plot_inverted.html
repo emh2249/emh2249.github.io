@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: An inverted linear scale</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.4.0/d3.min.js"></script>
 		<style type="text/css">
 			/* No style rules here yet */		
 		</style>
@@ -27,7 +27,7 @@
 
 			var yScale = d3.scaleLinear()
 								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
-								 .range([h, 0]);
+								 .range([h, 0]); //changed/ flipped the range so that 
 	
 			//Create SVG element
 			var svg = d3.select("body")

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: Chained transitions</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.4.0/d3.min.js"></script>
 		<style type="text/css">
 			/* No style rules here yet */
 		</style>
@@ -104,11 +104,13 @@
 					   .data(dataset)
 					   .transition()
 					   .duration(1000)
-					   .on("start", function() {
-						   d3.select(this)
-						     .attr("fill", "magenta")
-						     .attr("r", 7);
-					   })
+					   .attr("fill", "purple")
+					   .attr("r", 7)
+					//    .on("start", function() {
+					// 	   d3.select(this)
+					// 	     .attr("fill", "magenta")
+					// 	     .attr("r", 7);
+					//    })
 					   .attr("cx", function(d) {
 					   		return xScale(d[0]);
 					   })

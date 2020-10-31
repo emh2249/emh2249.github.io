@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: Linear scales with a scatterplot</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="vv"></script>
 		<style type="text/css">
 			/* No style rules here yet */		
 		</style>
@@ -35,13 +35,13 @@
 						.attr("width", w)
 						.attr("height", h);
 
-			//Create circles
+			//Create circles 
 			svg.selectAll("circle")
 			   .data(dataset)
 			   .enter()
 			   .append("circle")
-			   .attr("cx", function(d) {
-			   		return xScale(d[0]);
+			   .attr("cx", function(d) {  //appending circles to the scaled range and domain
+			   		return xScale(d[0]);  
 			   })
 			   .attr("cy", function(d) {
 			   		return yScale(d[1]);

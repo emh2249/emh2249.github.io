@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Page Template</title>
+        <script type="text/javascript" src="../d3.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var testArray = [1,2, 4, 5, 7, 2, 5, 4, 6]
+            
+            var test2 = [{key:A, value:1}, 
+                           {key:A, value:4},
+                           {key:A, value:1}]
+            
+            test2.sort(function(a,b){
+                return a.key-b.key
+            })
+            console.log(test2)
+
+            // d3.select("#list").html(testArray.sort())
+            
+            // Your beautiful D3 code will go here
+        </script>
+    </body>
+</html>

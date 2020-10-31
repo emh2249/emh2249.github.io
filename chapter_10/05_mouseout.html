@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: Using D3 to change fill color on mouseover AND mouseout</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.4.0/d3.min.js"></script>
 		<style type="text/css">
 			/* No style rules here yet */		
 		</style>
@@ -51,6 +51,7 @@
 			   .attr("fill", function(d) {
 					return "rgb(0, 0, " + Math.round(d * 10) + ")";
 			   })
+			   // MOUSE IN AND OUT Function 
 			   .on("mouseover", function() {
 			   		d3.select(this)
 			   			.attr("fill", "orange");

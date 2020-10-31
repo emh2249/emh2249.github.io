@@ -17,7 +17,7 @@
 	<h2>Elaine adds code to keep labels intact</h2>
 
 	<script type="text/javascript">
-		
+
 		//ASSIGNMENT: this currently sorts bars on click,
 		//once again, move the number labels to the right rectangles when sorted
 
@@ -63,6 +63,16 @@
 			})
 			.on("click", function () {
 				sortBars();
+			})
+			.on("mouseover", function () {
+				d3.select(this)
+					.attr("fill", "orange");
+			})
+			.on("mouseout", function (d) {
+				d3.select(this)
+					.transition("restoreBarColor")
+					.duration(700)
+					.attr("fill", "rgb(0, 0, " + (d * 10) + ")");
 			});
 
 		//Create labels
@@ -91,8 +101,8 @@
 				.sort(function (a, b) {
 					return d3.ascending(a, b);
 				})
-				.transition()
-				.duration(1000)
+				.transition("sortBars")
+				.duration(1000 *8)
 				.attr("x", function (d, i) {
 					return xScale(i);
 				});

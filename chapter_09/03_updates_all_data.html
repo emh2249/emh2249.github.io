@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>D3: A bar chart whose data updates with new data</title>
-		<script type="text/javascript" src="../d3.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.4.0/d3.min.js"></script>
 		<style type="text/css">
 			/* No style rules here yet */		
 		</style>
@@ -85,7 +85,7 @@
 					dataset = [ 11, 12, 15, 20, 18, 17, 16, 18, 23, 25,
 								5, 10, 13, 19, 21, 25, 22, 18, 15, 13 ];
 
-					//Update all rects
+					//Update all rects, you're only changing the Y and the HEIGHT
 					svg.selectAll("rect")
 					   .data(dataset)
 					   .attr("y", function(d) {
