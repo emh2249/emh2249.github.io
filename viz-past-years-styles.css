@@ -10,6 +10,8 @@ body {
     display: inline;
     fill: black;
     font-size: .75em;
+    background-color: whitesmoke;
+    font-family: "Inter", sans-serif;
 }
 
 /* AXES */
@@ -49,27 +51,27 @@ body {
 
 path.line-0 {
     fill: none;
-    stroke-width: 2;
+    stroke-width: 2px;
     stroke: #515B3A;
 }
 
 path.line-1 {
     fill: none;
-    stroke-width: .7;
+    stroke-width: 2px;
     stroke: #52B788;
     /* stroke-dasharray: 2; */
 }
 
 path.line-2 {
     fill: none;
-    stroke-width: .7;
+    stroke-width: 2px;
     stroke: #EF8275;
     /* stroke-dasharray: 6; */
 }
 
 path.line-3 {
     fill: none;
-    stroke-width: 2;
+    stroke-width: 2px;
     stroke: #592941;
     /* stroke-dasharray: 6; */
 }

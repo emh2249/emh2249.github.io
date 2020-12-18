@@ -251,10 +251,10 @@ svg
     svg
         .append("circle")
         .attr("class", "street")
-        .attr("cx", 1000)
+        .attr("cx", 1050)
         .attr("cy", 10)
-        .attr("r", 6)
-        .style("fill", "#2E0014")
+        .attr("r", 10)
+        .style("fill", "#515B3A")
         .on("click", function (d) {
             if (button1 == false) {
                 d3.selectAll("path")
@@ -272,10 +272,10 @@ svg
     svg
         .append("text")
         .attr("class", "street")
-        .attr("x", 1010)
-        .attr("y", 10)
+        .attr("x", 1070)
+        .attr("y", 16)
+        .attr("class", "describers")
         .text("2017")
-        .style("font-size", "15px")
         .on("click", function (d) {
             if (button1 == false) {
                 d3.selectAll("path")
@@ -294,10 +294,10 @@ svg
     svg
         .append("circle")
         .attr("class", "circle-commercial")
-        .attr("cx", 1000)
-        .attr("cy", 25)
-        .attr("r", 6)
-        .style("fill", "#442220")
+        .attr("cx", 1050)
+        .attr("cy", 35)
+        .attr("r", 10)
+        .style("fill", "#52B788")
         .on("click", function (d) {
             if (button2 == false) {
                 d3.selectAll("path")
@@ -314,11 +314,10 @@ svg
 
     svg
         .append("text")
-        .attr("x", 1010)
-        .attr("y", 25)
+        .attr("x", 1070)
+        .attr("y", 38)
         .text("2018")
-        .style("font-size", "15px")
-        .style("fill", "#442220")
+        .attr("class", "describers")
         .attr("alignment-baseline", "middle")
         .on("click", function (d) {
             if (button2 == false) {
@@ -338,10 +337,10 @@ svg
     svg
         .append("circle")
         .attr("class", "circle-vehicle")
-        .attr("cx", 1000)
-        .attr("cy", 40)
-        .attr("r", 6)
-        .style("fill", "#967AA1")
+        .attr("cx", 1050)
+        .attr("cy", 60)
+        .attr("r", 10)
+        .style("fill", "#EF8275")
         .on("click", function (d) {
             if (button3 == false) {
                 d3.selectAll("path")
@@ -358,11 +357,10 @@ svg
 
     svg
         .append("text")
-        .attr("x", 1010)
-        .attr("y", 40)
+        .attr("x", 1070)
+        .attr("y", 63)
         .text("2019")
-        .style("font-size", "15px")
-        .style("fill", "#967AA1")
+        .attr("class", "describers")
         .attr("alignment-baseline", "middle")
         .on("click", function (d) {
             if (button3 == false) {
@@ -382,10 +380,10 @@ svg
     svg
         .append("circle")
         .attr("class", "circle-vehicle")
-        .attr("cx", 1000)
-        .attr("cy", 55)
-        .attr("r", 6)
-        .style("fill", "#967AA1")
+        .attr("cx", 1050)
+        .attr("cy", 85)
+        .attr("r", 10)
+        .style("fill", "#592941")
         .on("click", function (d) {
             if (button4 == false) {
                 d3.selectAll("path")
@@ -402,11 +400,10 @@ svg
 
     svg
         .append("text")
-        .attr("x", 1010)
-        .attr("y", 55)
+        .attr("x", 1070)
+        .attr("y", 88)
         .text("2020")
-        .style("font-size", "15px")
-        .style("fill", "#967AA1")
+        .attr("class", "describers")
         .attr("alignment-baseline", "middle")
         .on("click", function (d) {
             if (button4 == false) {

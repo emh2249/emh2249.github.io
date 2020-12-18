@@ -14,8 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-     
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+    
     <style>
         /*
     we use vh units here to acoomodate the panel spacing, vh mean % of the window height
@@ -38,11 +40,16 @@
                 <!-- used to be panel2 -->
                 <div class="panel2">
                     <h1>Unprecedented events of 2020</h1>
-                    <p>2020 saw several significant events impacting the United States of America and the rest of the
-                        world.</p>
-                    <p>In this study, we explore how the year has unfolded in relation to the number of 311-noise
-                        complaints made to the New York City Police department.
+                    <p class="space">
+                        By Elaine Hsieh & Jo Hee Lee <br>
+                        Fall 2020 Data Visualization taught by Jia Zhang 
                     </p>
+                    <h2>2020 saw several significant events impacting the United States of America and the rest of the
+                        world. <br><br>
+                    In this study, we explore how the year has unfolded in relation to the number of 311-noise
+                        complaints made to the New York City Police department.
+                    </h2>
+                    
                 </div>
 
                 <div class="center">
@@ -50,9 +57,9 @@
                 </div>
 
                 <div class="panel2">
-                    <p>Two major events of interest in the study include the Covid-19 outbreak and the 'Black Lives
+                    <h2>Two major events of interest in the study include the Covid-19 outbreak and the 'Black Lives
                         Matter' protests that gained traction after the killing of George Floyd
-                    </p>
+                    </h2>
                 </div>
 
                 <div class="center">
@@ -71,74 +78,106 @@
             <div id="s-container" style="height: 100vh; overflow: scroll">
                 <div id="content">
 
-                    <div class="panel">
-                        <p>This is covid now</p>
-                    </div>
 
-                    <div class="panel">
+                    <div class="panel intro">
                         <h1>Noise Complaints in the last 4 years</h1>
-                        <p> 2017 Total Noise Complaints</p>
+                        <p>New York City has faced it's burden of noisy streets and honking cars. 
+                            The unusual year of 2020 continues its trend of noise with a record-high rate of 311 complaints. 
+                            Shown below are total noise complaints from the 2017 to 2020 with obvious spikes and dips throughout. 
+                        </p>
+                    </div>
+
+                    <div class="panel dot">
+                        .
+                    </div>
+                    
+                    <div class="panel dot">
+                        .
+                    </div>
+
+                    <div class="panel dot">
+                        .
                     </div>
 
                     <div class="panel">
                         <h1></h1>
-                        <p>2018 Total Noise Complaints</p>
-                    </div>
-
-                    <div class="panel">
-                        <h1></h1>
-                        <p>2019 Total Noise Complaints</p>
-                    </div>
-
-                    <div class="panel">
-                        <h1></h1>
-                        <p>2020 Total Noise Complaints</p>
-                    </div>
-
-                    <div class="panel">
-                        <h1></h1>
-                        <p>Text content for step 4</p>
-                    </div>
-
-                    <div class="panel">
-                        <h1>Step 5</h1>
-                        <p>Text content for step 5</p>
-                    </div>
-
-                    <div class="panel">
-                        <h1>Step 5</h1>
-                        <p>Text content for step 5</p>
+                        <p> </p>
                     </div>
 
                     
+                    <div class="panel">
+                        <h1></h1>
+                        <p> </p>
+                    </div>
+
+
+                    <div class="panel">
+                        <h1></h1>
+                        <p></p>
+                    </div>
+
+                    <div class="panel dot">
+                        .
+                    </div>
+
+                    <div class="panel">
+                        <p></p>
+                    </div>
+
+                    <div class="panel pastyeargraph">
+                        <p> Seasonal fluctuations are observable within a year and the manner of fluctuation remain
+                            constant across the years.
+                            Summer usually has the highest number of complaints for any season. Winter records the
+                            lowest.
+                            2020 sees the highest peak recorded across the past 4 years, Sunday June 21st, and remains
+                            much higher than the average since
+                            that date for the rest of the 2020 year.
+                        </p>
+                    </div>
+
+                    <div class="panel dot">
+                        .
+                    </div>
+
+                    <div class="panel dot">
+                        .
+                    </div>
+                    <div class="panel dot">
+                        .
+                    </div>
+
                     <div class="panel" class="iframe">
-                     <h1>Noise in 2020 by Type</h1>
-                     <p>Hover mouse over lines for specific info!</p>
+                        <h1>Noise in 2020 by Type</h1>
+                        <p>Hover mouse over lines for specific info!</p>
 
-                     <iframe
-                  title="Inline Frame Example"
-                  scrolling="no"
-                  style="border:none"
-                     width=90%
-                     height=700
-                    src="main-bytype.html">
-                    </iframe>
-
+                        <iframe title="Inline Frame Example" scrolling="no" style="border:none" width=90% height=700
+                            src="main-bytype.html">
+                        </iframe>
                     </div>
 
-                    
+                    <div class="panel intro">
+                        <h1>Some Limitations</h1>
+                        <p>Multiple calls are not necessarily linked to the same noise source. 
+                            Number of calls do not correlate to the actual noise intensity.
+                            The inability to directly identify type of street noise - eg. protest, street-peformers etc were all part of the limitations in accuracy for this study. 
+                        </p>
+                        <h1>Moving Forward</h1>
+                        <p>Although we are unsure of the exact reasons for the spike and dips in noise complaints, it is interesting to see 
+                            the uniqueness of 2020 and where the  will be heard in the future.   
+                        </p>
+                    </div>
 
-                  
-
-            <!-- <script src="animation.js"></script> -->
-            <script src="viz-past-years.js" defer="defer"></script>
-            <script src="./noise-by-type/main-bytype.js" defer="defer"></script>
 
 
-        
-            <script src="scroll-animation.js"></script>
+                    <!-- <script src="animation.js"></script> -->
+                    <script src="viz-past-years.js" defer="defer"></script>
+                    <script src="./noise-by-type/main-bytype.js" defer="defer"></script>
 
-            
+
+
+                    <script src="scroll-animation.js"></script>
+
+
 </body>
 
 </html>
