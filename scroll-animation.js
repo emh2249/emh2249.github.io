@@ -79,6 +79,7 @@ function step4() {
         console.log("do step4")
 }
 step4()
+
 function step5() {
     d3.selectAll(".firstviz--visible")
         .style("opacity", 1)
@@ -88,7 +89,9 @@ step5()
 
 function step6() {        
     d3.selectAll(".firstviz--visible")
-    .style("opacity", 1)
+    .transition()
+    .duration(1000)
+    .style("opacity", 0)
     
     
         console.log("do step6")
@@ -101,14 +104,14 @@ function step7() {
     .style("opacity", 0)
     console.log("do step7")
 }
+step7()
 
 function step8() {
-    d3.selectAll("svg")
+    // d3.selectAll("svg")
     
-    .style("opacity", 0)
+    // .style("opacity", 0)
     console.log("do step7")
 }
-
 
 
 var scrollTop = 0
