@@ -12,17 +12,18 @@ body {
   font-family: 'Crimson Pro', serif;
 
 }
+
 /* -----------------------NEW STUFF(Not sure if this is working, but a-container is for the intro) */
 #a-container {
   position: fixed;
   z-index: 100;
-  
+
 }
 
 #b-container {
   position: relative;
   z-index: 100;
-  
+
 }
 
 #s-container {
@@ -51,7 +52,7 @@ body {
   width: 100%;
   z-index: 100;
   padding-top: 10%;
-  
+
 }
 
 #container2 {
@@ -65,7 +66,7 @@ body {
   right: 50vh;
   width: 100%;
   z-index: 100;
-  
+
 }
 
 /* ---------------NEW STUFF (Created panel2 so I could edit the intro stuff separately from the other Step1-5 placeholders) -------- */
@@ -89,7 +90,7 @@ body {
   padding-left: 20px;
   padding-top: 20vh;
   padding-bottom: 25vh;
-  
+
   /* border-right:1px dotted black; */
 }
 
@@ -106,17 +107,17 @@ body {
 }
 
 .iframe {
-  padding-bottom:0vh;
+  padding-bottom: 0vh;
 }
 
 .intro {
-    text-align: center;
-    font-size: 20px;
-    width: 45%;
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+  text-align: center;
+  font-size: 20px;
+  width: 45%;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   background-color: whitesmoke;
 }
 
