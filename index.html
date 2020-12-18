@@ -1,79 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Elaine Hsieh | Data Visualization</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-        <style>
-            body {
-                background-color:#F9F5FF; 
-                font-family:"Consolas", helvetica;
-                color:#000000;
-                
-            }
-            #header{
-                color:#000000;
-            }/* every thing in the header section of your html, which is "Your Name" for now */
-            .section {
-                font-size:40px;
-            }/* every thing with the class name of section, which are the lines "Assignment" and "Projects" for now */
-            a {
-                font-size:14px;
-                color:#000000;
-                margin:10px;
-            }/*all the links, which start with <a and end with </a>*/
-            
-            .weeks{
-              font-size:20px;
-              margin:10px;
-              margin-top:20px;
-            }
-        </style>
-    </head>
-    <body>
-        <!--
-            In this tutorial you will make a page for hosting your projects and assignments for the class. 
-            This is an especially helpful primer for those new to HTML CSS and basic web protocols
-            This web page is made very ugly on purpose...
-            Change the styles in the <style>...</style> tags above - look at https://www.w3schools.com/html/html_css.asp for reference
-        -->
-            
-        <div id="header">Elaine Hsieh, Fall 2020</div>
-        <br><br>
-        <div class="section">Data Visualization using D3</div>
-        <div class="weeks">Week 2</div>
-        <a href="chapter_05/11_if_else_if_else_EXERCISE.html" target="_blank">Chapter 5 exercise 1</a><br>
-        <a href="chapter_05/12_filter_EXERCISE.html" target="_blank">Chapter 5 exercise 2</a>
-        <div class="weeks">Week 3</div>
-        <a href="chapter_06/11_EXERCISE.html" target="_blank">Chapter 6 exercise 1: Using conditions and values with SVG</a><br>
-        <a href="chapter_06/21_z_EXERCISE.html" target="_blank">Chapter 6  exercise 2: SVG bar chart with value labels</a><br>
-        <a href="chapter_06/24_z_EXERCISE.html" target="_blank">Chapter 6  exercise 3: A simple scatterplot with value labels</a>
-       
-        <div class="weeks">Week 4</div>
-       <a href="chapter_07/10_EXERCISE_scaled_scatterplot_from_data.html" target="_blank">Chapter 7 exercise 1: Time Scale</a><br>       
-       <a href="chapter_08/10_EXERCISE.html" target="_blank">Chapter 8 exercise 2: Time Axis, Prettier</a>
-       
-        <div class="weeks">Week 5</div>
-       <a href="chapter_09/25_adding_values_EXERCISE.html" target="_blank">Chapter 9 exercise 1: Adding values and elements to a chart</a><br>       
-       <a href="chapter_09/26_removing_values_EXERCISE.html" target="_blank">Chapter 9 exercise 2: Removing values from a chart</a><br>
-       <a href="chapter_09/27_data_join_with_key_EXERCISE.html" target="_blank">Chapter 9 exercise 3: Removing values from a chart</a><br>
-       <a href="chapter_09/28_adding_and_removing_EXERCISE.html" target="_blank">Chapter 9 exercise 4: Adding and removing values from a chart</a><br>
-       <a href="chapter_09/30_rotate_90_EXERCISE.html" target="_blank">Chapter 9 exercise 5: A static delay before transition</a>
-       
-       <div class="weeks">Week 6</div>
-       <a href="chapter_10/07_sort_EXERCISE.html" target="_blank">Chapter 10 exercise 1: Sorting visual elements</a><br>
-       <a href="chapter_10/15_add_tooltip_EXERCISE.html" target="_blank">Chapter 10 exercise 2: Time axis, prettier</a>
+<html>
 
-        <div class="weeks">Self-Quantification</div>
-       <a href="./elaine-food-diary/sankey-fooddiary.html" target="_blank">Elaine's Food Diary</a><br>
-       
-       <p> resources: 
-           <a href="https://github.com/d3/d3-scale">d3-scale</a><br>
-           <a href="https://betterfigures.org/2015/06/23/picking-a-colour-scale-for-scientific-graphics/">color picker</a><br>
-            
-    </p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>Empty Scroller Template</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.3.1/d3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="viz-past-years-styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="scroll-style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+     
+    <style>
+        /*
+    we use vh units here to acoomodate the panel spacing, vh mean % of the window height
+    see more at link below
+    https://www.w3schools.com/cssref/css_units.asp
+*/
+    </style>
+</head>
 
-        <script type="text/javascript">
-        </script>
-    </body>
+<body>
+    <div>
+
+        <!-------------------------------------- NEW STUFF (Intro page with photo & Text)  --------------------------------->
+
+        <div id="container1" class="svg-container"></div>
+
+        <div id="a-container" style="height: 100vh; overflow: scroll">
+            <div id="content">
+
+                <!-- used to be panel2 -->
+                <div class="panel2">
+                    <h1>Unprecedented events of 2020</h1>
+                    <p>2020 saw several significant events impacting the United States of America and the rest of the
+                        world.</p>
+                    <p>In this study, we explore how the year has unfolded in relation to the number of 311-noise
+                        complaints made to the New York City Police department.
+                    </p>
+                </div>
+
+                <div class="center">
+                    <img src="/graphics/COVID_1.jpg" width="100%">
+                </div>
+
+                <div class="panel2">
+                    <p>Two major events of interest in the study include the Covid-19 outbreak and the 'Black Lives
+                        Matter' protests that gained traction after the killing of George Floyd
+                    </p>
+                </div>
+
+                <div class="center">
+                    <img src="/graphics/BLM_1.jpg" width="100%">
+                </div>
+
+
+
+
+            </div>
+
+            <div id="container" class="svg-container">
+            </div>
+
+
+            <div id="s-container" style="height: 100vh; overflow: scroll">
+                <div id="content">
+
+                    <div class="panel">
+                        <p>This is covid now</p>
+                    </div>
+
+                    <div class="panel">
+                        <h1>Noise Complaints in the last 4 years</h1>
+                        <p> 2017 Total Noise Complaints</p>
+                    </div>
+
+                    <div class="panel">
+                        <h1></h1>
+                        <p>2018 Total Noise Complaints</p>
+                    </div>
+
+                    <div class="panel">
+                        <h1></h1>
+                        <p>2019 Total Noise Complaints</p>
+                    </div>
+
+                    <div class="panel">
+                        <h1></h1>
+                        <p>2020 Total Noise Complaints</p>
+                    </div>
+
+                    <div class="panel">
+                        <h1></h1>
+                        <p>Text content for step 4</p>
+                    </div>
+
+                    <div class="panel">
+                        <h1>Step 5</h1>
+                        <p>Text content for step 5</p>
+                    </div>
+
+                    <div class="panel">
+                        <h1>Step 5</h1>
+                        <p>Text content for step 5</p>
+                    </div>
+
+                    
+                    <div class="panel" class="iframe">
+                     <h1>Noise in 2020 by Type</h1>
+                     <p>Hover mouse over lines for specific info!</p>
+
+                     <iframe
+                  title="Inline Frame Example"
+                  scrolling="no"
+                  style="border:none"
+                     width=90%
+                     height=700
+                    src="main-bytype.html">
+                    </iframe>
+
+                    </div>
+
+                    
+
+                  
+
+            <!-- <script src="animation.js"></script> -->
+            <script src="viz-past-years.js" defer="defer"></script>
+            <script src="./noise-by-type/main-bytype.js" defer="defer"></script>
+
+
+        
+            <script src="scroll-animation.js"></script>
+
+            
+</body>
+
 </html>

@@ -1,0 +1,73 @@
+/* Base Styles */
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+
+/* AXES */
+
+
+/* ticks */
+
+.axis line {
+    stroke: #706f6f;
+    stroke-width: 0.5;
+    shape-rendering: crispEdges;
+}
+
+
+/* axis contour */
+
+.axis path {
+    stroke: #706f6f;
+    stroke-width: 0.7;
+    shape-rendering: crispEdges;
+}
+
+
+/* axis text */
+
+.axis text {
+    fill: #2b2929;
+    /* font-family: Georgia; */
+    font-size: 120%;
+}
+
+
+/* LINE CHART */
+
+
+/* LINE CHART */
+
+path.line-0 {
+    fill: none;
+    stroke: #D74E09;
+}
+
+path.line-1 {
+    fill: none;
+    stroke: #548C2F;
+    /* stroke-dasharray: 2; */
+}
+
+path.line-2 {
+    fill: none;
+    stroke: #279AF1;
+    /* stroke-dasharray: 6; */
+}
+
+.serie_label {
+    fill: #2b2929;
+    /* font-family: Georgia; */
+    font-size: 80%;
+}
+
+
+/* tooltip */
+
+.tooltip {
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 20px;
+}
