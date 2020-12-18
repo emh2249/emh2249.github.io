@@ -108,7 +108,7 @@ function step8() {
     .style("opacity", 0)
     console.log("do step7")
 }
-step8()
+
 
 function step9() {
     console.log("do step7")
