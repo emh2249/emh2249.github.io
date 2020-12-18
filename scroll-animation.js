@@ -110,10 +110,6 @@ function step8() {
 }
 
 
-function step9() {
-    console.log("do step7")
-}
-
 
 var scrollTop = 0
 var newScrollTop = 0
@@ -123,7 +119,7 @@ ScrollReveal().reveal('.line-0')
     
 
 //here we list all the functions we have above, but just the names without the parenthesis so we don't trigger the functions now
-var listOfStepFunctions = [step0, step1, step2, step3, step4, step5, step6, step7]
+var listOfStepFunctions = [step0, step1, step2, step3, step4, step5, step6, step7, step8]
 
 
 //whenever the container scrolls, we need to get how far it has scrolled and save it to the variable newScrollTop
