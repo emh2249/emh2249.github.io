@@ -414,7 +414,7 @@
                         )
                         .style("left", d3.event.pageX + 25 + "px")
                         .style("top", d3.event.pageY + "px")
-                        .style("background","white");
+                        .style("background","whitesmoke");
 
                     //add this
                     const selection = d3.select(this).raise();
